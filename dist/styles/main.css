@@ -1,0 +1,445 @@
+@import url(normalize.css);
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* use this class for block that has child floated elements */
+.ba-clearfix:before,
+.ba-clearfix:after {
+  content: '';
+  display: table;
+}
+
+.ba-clearfix:after {
+  clear: both;
+}
+
+/* hack for IE 6/7 */
+.ba-clearfix {
+  *zoom: 1;
+}
+
+/* classes for text */
+.ba-text-center {
+  text-align: center;
+}
+
+.ba-text-left {
+  text-align: left;
+}
+
+.ba-text-right {
+  text-align: right;
+}
+
+.ba-text-justify {
+  text-align: justify;
+}
+
+/* layout classes */
+.ba-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.ba-float-left {
+  float: left;
+}
+
+.ba-float-right {
+  float: right;
+}
+
+/* ba grid defination */
+/* use this class for block that has child floated elements */
+.ba-grid:before,
+.ba-grid:after {
+  content: '';
+  display: table;
+}
+
+.ba-grid:after {
+  clear: both;
+}
+
+/* hack for IE 6/7 */
+.ba-grid {
+  *zoom: 1;
+}
+
+.ba-grid {
+  margin: 0 -15px;
+}
+
+.ba-grid + .ba-grid {
+  margin-top: 30px;
+}
+
+.ba-grid > [class*="ba-column-"] {
+  padding: 0 15px;
+}
+
+[class*="ba-column-"] {
+  float: left;
+}
+
+.ba-column-12 {
+  width: 100%;
+}
+
+.ba-column-11 {
+  width: 91.667%;
+}
+
+.ba-column-10 {
+  width: 83.334%;
+}
+
+.ba-column-9 {
+  width: 75%;
+}
+
+.ba-column-8 {
+  width: 66.667%;
+}
+
+.ba-column-7 {
+  width: 58.33333333%;
+}
+
+.ba-column-6 {
+  width: 50%;
+}
+
+.ba-column-5 {
+  width: 41.6666667%;
+}
+
+.ba-column-4 {
+  width: 33.334%;
+}
+
+.ba-column-3 {
+  width: 25%;
+}
+
+.ba-column-2 {
+  width: 16.667%;
+}
+
+.ba-column-1 {
+  width: 8.334%;
+}
+
+a, button, .ba-logo__small-box, .ba-logo__big-box {
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.ba-container {
+  max-width: 1470px;
+}
+
+.ba-header {
+  position: relative;
+  margin-top: 50px;
+}
+
+.ba-logo {
+  text-decoration: none;
+}
+
+.ba-logo__small-box {
+  fill-opacity: 0;
+  stroke: #97d1eb;
+  /* stroke-linejoin: round; */
+  stroke-width: 6px;
+}
+
+.ba-logo__big-box {
+  fill-opacity: 0;
+  stroke: #e5e5e5;
+  /* stroke-linejoin: round; */
+  stroke-width: 6px;
+  opacity: 0.5;
+}
+
+.ba-logo__small-svg {
+  position: relative;
+  left: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.ba-logo__text {
+  color: #000000;
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  display: block;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.ba-logo:hover .ba-logo__small-box {
+  stroke: #15526e;
+}
+
+.ba-logo:hover .ba-logo__big-box {
+  stroke: #666666;
+}
+
+.ba-logo:hover .ba-logo__text {
+  color: gray;
+}
+
+.ba-navigation__item {
+  display: inline-block;
+}
+
+.ba-navigation__link {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 2.6;
+  text-decoration: none;
+  color: #000000;
+  padding-bottom: 12px;
+}
+
+.ba-navigation__link:hover {
+  border-bottom: 5px solid #F2F2F2;
+  color: gray;
+}
+
+.ba-navigation__item + .ba-navigation__item {
+  margin-left: 60px;
+}
+
+.ba-banner .slick-dots {
+  position: absolute;
+  bottom: 15px;
+}
+
+.ba-banner .slick-dots li {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.ba-banner .slick-dots li button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  color: #BCC0CD;
+}
+
+.ba-banner .slick-dots li button:hover {
+  color: #737b97;
+}
+
+.ba-banner .slick-dots li button:after {
+  content: "";
+  background-color: transition;
+  height: 2px;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.ba-banner .slick-dots li button:hover {
+  cursor: pointer;
+}
+
+.ba-banner .slick-dots .slick-active button {
+  color: #000000;
+  position: relative;
+}
+
+.ba-banner .slick-dots .slick-active button:after {
+  content: "";
+  background-color: #000000;
+  height: 2px;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.ba-banner .ba-slider__counter {
+  width: 193px;
+  height: 193px;
+  background-color: #97D1EB;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 100px;
+}
+
+.ba-banner .ba-slider__arrow {
+  position: absolute;
+  color: #EFF1F5;
+  border: 2px solid #EFF1F5;
+  background-color: transparent;
+  height: 72px;
+  width: 72px;
+  font-size: 40px;
+  outline: none;
+}
+
+.ba-banner .ba-slider__arrow:hover {
+  cursor: pointer;
+  color: #a1acc4;
+  border: 2px solid #a1acc4;
+}
+
+.ba-banner .ba-slider__arrow--left {
+  left: 163px;
+  top: 107px;
+}
+
+.ba-banner .ba-slider__arrow--right {
+  left: 163px;
+  bottom: 107px;
+}
+
+.ba-banner .ba-current-position {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 72px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #FFF;
+}
+
+.ba-banner .ba-slide {
+  outline: none;
+  height: 550px;
+  position: relative;
+}
+
+.ba-banner__images img {
+  height: 550px;
+}
+
+.ba-banner__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 1.3;
+  letter-spacing: 0.125em;
+  position: absolute;
+  width: 52%;
+  left: 350px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-bottom: 50px;
+  border-bottom: 15px solid #99d2eb;
+}
+
+.ba-about {
+  padding: 80px 0 50px;
+}
+
+.ba-about__box {
+  padding: 0 !important;
+  height: 100%;
+  background-color: grey;
+  position: relative;
+  overflow: hidden;
+}
+
+.ba-about__box:hover {
+  cursor: pointer;
+}
+
+.ba-about__box:hover .ba-block {
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.ba-about__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  color: #fff;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: .25;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ba-about .ba-block {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 10px solid #5da8ef;
+  transition: all .2s ease-in;
+}
+
+.ba-projects .ba-slide img {
+  margin: 0 auto;
+}
+
+.ba-projects #ba-small-projects .slick-current img {
+  border: 15px solid #5da8ef;
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73" height="76" viewBox="0 0 73 76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-opacity: 0;
+        stroke: #e5e5e5;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <rect id="big-box.svg" class="cls-1" x="3" y="3" width="67" height="70"/>
+</svg>

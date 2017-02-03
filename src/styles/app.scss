@@ -18,7 +18,13 @@
 $title-text: #000000;
 $brand-color: #5da8ef;
 
-a, button, .ba-logo__small-box, .ba-logo__big-box {
+a, button,
+.ba-logo__small-box,
+.ba-logo__big-box,
+.ba-logo__text,
+.ba-footer-logo__small-box,
+.ba-footer-logo__big-box,
+.ba-footer-logo__text {
 	-webkit-transition: all .2s ease-in;
 	-moz-transition: all .2s ease-in;
 	-ms-transition: all .2s ease-in;
@@ -257,7 +263,7 @@ a, button, .ba-logo__small-box, .ba-logo__big-box {
 }
 // end banner styling
 
-// ba-about
+// about styling
 .ba-about {
 	padding: 80px 0 50px;
 	&__box {
@@ -299,21 +305,422 @@ a, button, .ba-logo__small-box, .ba-logo__big-box {
 	}
 
 }
-// ba-about
+// end about styling
+
+// work styling
+.ba-work {
+	&__wrapper {
+		background: url(../images/we_work.jpg) 0 0 no-repeat;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		padding: 64px 0;
+	}
+	&__title {
+		text-transform: uppercase;
+		@include title-text;
+		color: #97D1EB;
+		font-size: 16px;
+		letter-spacing: 0.25em;
+		text-align: center;
+		position: relative;
+		&:before {
+			content: "";
+			height: 1px;
+			width: 190px;
+			background-color: #97D1EB;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			   -moz-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			     -o-transform: translateY(-50%);
+			        transform: translateY(-50%);
+			left: 29%;
+		}
+		&:after {
+			content: "";
+			height: 1px;
+			width: 190px;
+			background-color: #97D1EB;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			   -moz-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			     -o-transform: translateY(-50%);
+			        transform: translateY(-50%);
+			right: 29%;
+		}
+	}
+	&__sub-title {
+		text-align: center;
+		@include title-text;
+		font-size: 60px;
+		line-height: 1;
+		letter-spacing: 0.025em;
+		position: relative;
+		z-index: 5;
+		&:after {
+			z-index: 3;
+			@include title-text;
+			font-size: 222px;
+			color: #FFF;
+			// text-shadow: ;
+			position: absolute;
+			top: -103px;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			   -moz-transform: translateX(-50%);
+			    -ms-transform: translateX(-50%);
+			     -o-transform: translateX(-50%);
+			        transform: translateX(-50%);
+			text-shadow: 1px 1px 50px lighten(#000000, 80%);
+		}
+	}
+	&__dexterity {
+		&:after {
+			content: "1";
+		}
+	}
+	&__team {
+		&:after {
+			content: "2";
+		}
+	}
+	&__partnership {
+		&:after {
+			content: "3";
+		}
+	}
+}
+// end work styling
 
 // ba-projects
-
 .ba-projects {
+	padding-bottom: 55px;
+	&__sub-title {
+		text-transform: uppercase;
+		@include title-text;
+		color: #97D1EB;
+		font-size: 16px;
+		letter-spacing: 0.25em;
+		text-align: center;
+		position: relative;
+		margin: 0;
+		padding: 100px 0;
+		&:before {
+			content: "";
+			height: 1px;
+			width: 190px;
+			background-color: #97d1eb;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			   -moz-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			     -o-transform: translateY(-50%);
+			        transform: translateY(-50%);
+			left: 28%;
+		}
+		&:after {
+			content: "";
+			height: 1px;
+			width: 190px;
+			background-color: #97D1EB;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			   -moz-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			     -o-transform: translateY(-50%);
+			        transform: translateY(-50%);
+			right: 28%;
+		}
+	}
+	&__title {
+		@include title-text;
+		font-size: 48px;
+		width: 75%;
+		margin: 135px 0 60px 40px;
+		position: relative;
+		&:after {
+			content: "2";
+			color: $title-text;
+			font-size: 285px;
+			opacity: 0.05;
+			position: absolute;
+			top: 40px;
+			right: -40px;
+		}
+	}
+	&__content {
+		@include content-text;
+		font-size: 14px;
+		color: #9ca2b4;
+		width: 93%;
+		margin: 0 0 80px 40px;
+		line-height: 3.4;
+		position: relative;
+		
+	}
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 14px;
+		@include content-text;
+		border: 1px solid #9CA2B4;
+		color: #9CA2B4;
+		margin: 0 0 0 40px;
+		padding: 15px 46px;
+		&:hover {
+			border: 1px solid darken(#9CA2B4, 25%);
+			color: lighten(#9CA2B4, 50%);
+			background-color: darken(#FFF, 25%);
+			font-weight: 800;
+		}
+	}
 	.ba-slide {
+		position: relative;
 		img {
 			margin: 0 auto;
 		}
 	}
-	#ba-small-projects {
-		.slick-current {
-				img {
-					border: 15px solid $brand-color;
+
+	#ba-big-projects {
+		padding-bottom: 15px;
+		.ba-slider__arrow {
+			position: absolute;
+			right: -52.5px;
+			width: 105px;
+			height: 105px;
+			font-size: 20px;
+			color: #FFF;
+			
+			border: none;
+			outline: none;
+			&:hover {
+				
+			}
+			&--left {
+				bottom: 50%;
+				background-color: #80bfdb;
+				&:hover {
+					cursor: pointer;
+					background-color: darken(#80bfdb, 25%);
 				}
 			}
+			&--right {
+				top: 50%;
+				background-color: #97d1eb;
+				&:hover {
+					cursor: pointer;
+					background-color: darken(#97d1eb, 25%);
+				}
+			}
+		}
+	}
+
+	#ba-small-projects {
+		padding-top: 15px;
+		.ba-slider {
+			.slick-track {
+				width: 1200px !important;
+				margin:0 auto;
+			}
+		}
+		.ba-slide {
+			width: 300px !important;
+			
+		}
+		.slick-current {
+			& .ba-block {
+				position: absolute;
+				top: 0px;
+				left: 40px;
+				right: 40px;
+				bottom: 0px;
+				border: 10px solid #97d1eb;
+				transition: all .2s ease-in;
+			}
+		}
+	}
+
+}
+// end projects styling
+
+// contact styling
+.ba-contact {
+	position: relative;
+	&__list {
+		padding: 90px 0 10px;
+		width: 438px;
+		margin: 0 auto;
+	}
+	&__item {
+		display: inline-block;
+	}
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		@include title-text;
+		line-height: 1;
+		letter-spacing: 0.025em;
+		color: #BCC0CD;
+		border-bottom: 1px solid transparent;
+		padding-bottom: 5px;
+		&:hover {
+			color: #97d1eb;
+			border-bottom: 1px solid #97d1eb;;
+		}
+	}
+	&__item + &__item {
+		padding-left: 30px;
+	}
+	&__image {
+		width: 544px;
+		display: block;
+	}
+	.ba-form {
+		width: 438px;
+		margin: 0 auto;
+		&__name:focus::-webkit-input-placeholder,
+		&__phone:focus::-webkit-input-placeholder,
+		&__email:focus::-webkit-input-placeholder,
+		&__field:focus::-webkit-input-placeholder {
+			text-indent: -500px;
+			transition: text-indent 0.5s ease-in;
+		}
+		&__name::-webkit-input-placeholder,
+		&__phone::-webkit-input-placeholder,
+		&__email::-webkit-input-placeholder {
+			@include title-text;
+			font-size: 36px;
+			line-height: 1.6;
+			letter-spacing: 0.025em;
+			color: #EEEFF2;
+		}
+		&__field::-webkit-input-placeholder {
+			@include title-text;
+			font-size: 24px;
+			line-height: 2.5;
+			letter-spacing: 0.025em;
+			color: #EEEFF2;
+		}
+		&__name, 
+		&__phone,
+		&__email {
+			font-size: 36px;
+			padding-bottom: 15px;
+			padding-top: 35px;
+			border: none;
+			border-bottom: 1px solid #eeeff2;
+			outline: none;
+		}
+		&__field {
+			font-size: 24px;
+			border: none;
+			border-bottom: 1px solid #eeeff2;
+			outline: none;
+			resize: none;
+			width: 438px;
+			display: block;
+			margin-bottom: 45px;
+		}
+		&__button {
+			background-color: transparent;
+			border: 1px solid #e9ecf2;
+			color: #B4B9C7;
+			@include content-text;
+			font-size: 14px;
+			padding: 15px 67px;
+			text-transform: uppercase;
+			position: relative;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			   -moz-transform: translateX(-50%);
+			    -ms-transform: translateX(-50%);
+			     -o-transform: translateX(-50%);
+			        transform: translateX(-50%);
+			&:hover {
+				cursor: pointer;
+				background-color: darken(#b4b9c7, 25%);
+				color: lighten(#b4b9c7, 25%);
+			}
+		}
+	}
+	
+}
+// end contact styling
+
+// footer styling
+.ba-footer-logo {
+	position: relative;
+	&__small-svg {
+		position: relative;
+		left: 25px;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		}
+	&__link {
+		display: block;
+		width: 250px;
+		margin: 0 auto;
+		text-decoration: none;
+		&:hover .ba-footer-logo__small-box {
+			stroke: #97d1eb,
+		}
+		&:hover .ba-footer-logo__big-box {
+			stroke: #e5e5e5,
+		}
+		&:hover .ba-footer-logo__text{
+			color: lighten( #929292, 25%);
+		}
+	}
+	&__text {
+		color: #929292;
+		font-size: 30px;
+		@include title-text;
+		display: block;
+		position: absolute;
+		left: 46.6%;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	&__small-box {
+		fill-opacity: 0;
+		stroke: #4a4a4a;
+		/* stroke-linejoin: round; */
+		stroke-width: 6px;
+	}
+	&__big-box {
+		fill-opacity: 0;
+		stroke: #2f2f2f;
+		/* stroke-linejoin: round; */
+		stroke-width: 6px;
+		opacity: 0.5;
+		}
+
+}
+
+.ba-footer {
+	padding: 75px 0 83px;
+	background-color: #0F0F0F;
+	&__copyright {
+		width: 300px;
+		margin: 0 auto;
+		@include secondary-text;
+		font-size: 14px;
+		line-height: 3.4;
+		color: #5D5D5D;
 	}
 }
+// end footer styling
